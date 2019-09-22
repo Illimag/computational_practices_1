@@ -1,4 +1,4 @@
-# HW1
+# Homework 1
 
 ## P5.JS Account Creation
 
