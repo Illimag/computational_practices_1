@@ -168,6 +168,9 @@ function draw() {
   triangle(381, 0, 397, 27, 413, 0);
   
   /* 53 */
-  fill("#ffffff");
   quad(292, 27, 308, 0, 381, 0, 397, 27);
+
+  /* 54 */
+  fill("#ffffff");
+  triangle(276, 0, 292, 27, 308, 0);
 }
