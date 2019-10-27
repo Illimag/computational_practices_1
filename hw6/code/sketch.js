@@ -180,6 +180,9 @@ function draw() {
   triangle(171, 0, 187, 27, 203, 0);
 
   /* 57 */
-  fill("#ffffff");
   quad(82, 27, 98, 0, 171, 0, 187, 27);
+
+  /* 58 */
+  fill("#ffffff");
+  triangle(29, 117, 82, 27, 135, 118);
 }
