@@ -207,6 +207,9 @@ function draw() {
   triangle(187, 209, 239, 118, 292, 209);
 
   /* 66 */
-  fill("#ffffff");
   triangle(239, 118, 292, 27, 344, 118);
+
+  /* 67 */
+  fill("#ffffff");
+  triangle(239, 118, 292, 209, 344, 118);
 }
