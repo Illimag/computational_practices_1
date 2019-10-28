@@ -1,4 +1,6 @@
 let song;
+let value = 0;
+let value1 = 255;
 
 function preload() {
   song = loadSound('sound.wav');
@@ -6,22 +8,17 @@ function preload() {
 
 function setup() {
   song.loop();
-  createCanvas(900, 600, WEBGL);
-  detailY = createSlider(2, 24, 6);
-  detailY.position(10, height + 5);
-  detailY.style('width', '80px');
+  createCanvas(900, 600);
 }
 
 function draw() {
   background(0);
-  rotateY(millis() / 1000);
-  ellipsoid(240, 240, 240, 24, detailY.value());
-  
   /* 0 */
-  fill("#000000");
-  stroke('#ffffff');
+  fill(value);
+  stroke(value1);
   strokeWeight(2);
   triangle(62, 0, 82, 27, 98, 0);
+  
   /* 1 */
   quad(0, 0, 0, 26, 81, 26, 61, 0);
   
@@ -468,4 +465,17 @@ function draw() {
   
   /* 147 */
   triangle(765, 482, 818, 573, 870, 482);
+}
+
+function mouseClicked() {
+  if (value === 0) {
+    value = 255;
+  } else {
+    value = 0;
+  }
+  if (value1 === 0) {
+    value1 = 255;
+  } else {
+    value1 = 0;
+  }
 }
