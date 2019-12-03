@@ -21,7 +21,7 @@ export class HumanComputerComponent implements OnInit {
 
       p.setup = () => {
         /* Framerate */
-        p.frameRate(10);
+        p.frameRate(5);
         p.createCanvas(900, 600);
       }
 
@@ -34,10 +34,11 @@ export class HumanComputerComponent implements OnInit {
 
         /* Randomize RGB */
         randomizeColor();
+        randomizeStrokeColor();
 
         /* 0 section */
         p.fill(rgbArr[0].R, rgbArr[0].G, rgbArr[0].B);
-        p.stroke("#ffffff");
+        p.stroke(rgbArr[0].R, rgbArr[0].G, rgbArr[0].B);
         p.strokeWeight(2);
         p.triangle(62, 0, 82, 27, 98, 0);
 
@@ -633,6 +634,11 @@ export class HumanComputerComponent implements OnInit {
       }
 
       function randomizeColor() {
+        for (let i = 0; i < 148; i++) {
+          rgbArr[i] = { R: p.random(0, 51), G: p.random(0, 51), B: p.random(0, 51) };
+        }
+      }
+      function randomizeStrokeColor() {
         for (let i = 0; i < 148; i++) {
           rgbArr[i] = { R: p.random(50, 60), G: p.random(50, 130), B: p.random(150, 180) };
         }
